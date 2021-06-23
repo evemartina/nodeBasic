@@ -1,0 +1,25 @@
+{
+  "name": "03-base-node",
+  "version": "1.0.0",
+  "description": "basicos node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "base9": "node app --base=9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evemartina/basicosNode.git"
+  },
+  "author": "evelynHenrique",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evemartina/basicosNode/issues"
+  },
+  "homepage": "https://github.com/evemartina/basicosNode#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "yargs": "^17.0.1"
+  },
+  "devDependencies": {}
+}
