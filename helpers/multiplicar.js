@@ -1,39 +1,28 @@
 
 const fs = require('fs');
+const color = require('colors')
 
-// const crearArchivo = ( base = 5)=>{
-//     return new Promise((resolve, reject) => {
-//         console.log('::::::::::::::::::::::::::::::::::')
-//         console.log('Tabla de ',base)
-//         console.log('::::::::::::::::::::::::::::::::::')
-
-//         let salida ='';
-//         for (let index = 1; index <=10; index++) {
-//             salida +=`${base} x ${index} = ${base*index}\n`
-            
-//         }
-//         console.log(salida)
-//         fs.writeFileSync(`tablas-${base}.txt`,salida);
-//         resolve(`tablas-${base}.txt creada`)
+const crearArchivo = async( base = 5,listar,hasta =10)=>{
         
-//     });
-// }
+   
 
-const crearArchivo = async( base = 5)=>{
-        
-    console.log('::::::::::::::::::::::::::::::::::')
-    console.log('Tabla de ',base)
-    console.log('::::::::::::::::::::::::::::::::::')
+    let salida =''
+    let consola ='';
 
-    let salida ='';
-    for (let index = 1; index <=10; index++) {
-        salida +=`${base} x ${index} = ${base*index}\n`
-        
+    for (let index = 1; index <= hasta; index++) {
+        salida +=`${base} x ${index} = ${base*index}\n` 
+        consola +=`${base} ${color.red('x')} ${index} ${color.green('=')} ${color.magenta(base*index)}\n`        
     }
-    console.log(salida)
-    fs.writeFileSync(`tablas-${base}.txt`,salida);
-    return`tablas-${base}.txt creada`
-            
+
+    if(listar){
+        console.log('::::::::::::::::::::::::::::::::::')
+        console.log('Tabla de ',color.cyan(base))
+        console.log('::::::::::::::::::::::::::::::::::')
+        console.log(consola)
+    }
+
+    fs.writeFileSync(`./salida/ tablas-${base}.txt`,salida);
+    return color.rainbow(`tablas-${base}.txt creada`)        
        
 }
 module.exports ={
