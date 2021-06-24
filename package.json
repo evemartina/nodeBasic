@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evemartina/basicosNode.git"
+    "url": "git+https://github.com/evemartina/nodeBasic.git"
   },
   "author": "evelynHenrique",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/evemartina/basicosNode/issues"
+    "url": "https://github.com/evemartina/nodeBasic/issues"
   },
-  "homepage": "https://github.com/evemartina/basicosNode#readme",
+  "homepage": "https://github.com/evemartina/nodeBasic#readme",
   "dependencies": {
     "colors": "^1.4.0",
     "yargs": "^17.0.1"
